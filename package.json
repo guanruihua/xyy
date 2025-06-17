@@ -1,27 +1,49 @@
 {
-  "name": "command-go",
-  "version": "0.1.2",
+  "name": "@ruihuag/xyy",
+  "version": "0.2.0",
   "description": "Common cmd Commands/Scripts",
-  "module": "src/index.esm.js",
-  "main": "src/index.js",
-  "unpkg": "/src/",
-  "deliver": "/src/",
+  "module": "lib/index.cjs",
+  "main": "lib/index.cjs",
+  "unpkg": "/lib/index.cjs",
+  "deliver": "/lib/index.cjs",
   "scripts": {
     "test": "node test/index.js",
-    "pub": "npm publish"
+    "build": "rollup -c rollup.config.mjs",
+    "scope": "npm init --scope=ruihuag",
+    "pub": "npm publish --access public"
+  },
+  "bin": {
+    "xyy": "lib/xyy.cjs"
   },
   "keywords": [],
   "author": "ruihuag",
-  "bugs": "https://github.com/guanruihua/command-go/issues",
+  "bugs": {
+    "url": "https://github.com/guanruihua/xyy/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:guanruihua/command-go.git"
+    "url": "git+ssh://git@github.com/guanruihua/xyy.git"
   },
   "license": "ISC",
   "peerDependencies": {
+    "commander": "^14.0.0",
     "enquirer": "^2.3.6"
   },
   "devDependencies": {
-    "enquirer": "^2.3.6"
+    "@babel/core": "^7.27.4",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "commander": "^14.0.0",
+    "enquirer": "^2.3.6",
+    "ignore": "^7.0.3",
+    "rollup": "^4.35.0"
+  },
+  "homepage": "https://github.com/guanruihua/xyy#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }

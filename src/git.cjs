@@ -1,5 +1,5 @@
 const __execSync = require('child_process').execSync
-const { getGitBranch, getPackage } = require('./util')
+const { getGitBranch, getPackage } = require('./util/index.cjs')
 const { MultiSelect, Input } = require('enquirer')
 
 const execSync = (command) => {
