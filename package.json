@@ -1,6 +1,6 @@
 {
   "name": "@ruihuag/xyy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Common cmd Commands/Scripts",
   "module": "lib/index.cjs",
   "main": "lib/index.cjs",
@@ -10,7 +10,7 @@
     "test": "node test/index.js",
     "build": "rollup -c rollup.config.mjs",
     "scope": "npm init --scope=ruihuag",
-    "pub": "npm publish --access public"
+    "pub": "npm run build && npm publish --access public"
   },
   "bin": {
     "xyy": "lib/xyy.cjs"
