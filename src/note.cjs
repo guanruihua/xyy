@@ -7,7 +7,6 @@ const { runCommand } = require('./util/index.cjs')
  */
 async function NoteCommand(commit = 'docs: edit document') {
   try {
-    await runCommand('npm run build')
     await runCommand('git add .')
     await runCommand(`git commit -m "${commit}"`)
     await runCommand(`git push`)
