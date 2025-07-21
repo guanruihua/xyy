@@ -10,7 +10,7 @@ program
   .name('xyy')
   .description('Execute Command')
   .version(pkg.version)
-  .argument('<command>', 'save | publish | onlySave | git')
+  .argument('<command>', 'save | publish | onlySave | git | note')
   .argument('[commit]', 'git commit -m [commit]')
   .option(
     '--newVersion <newVersion>',
@@ -28,6 +28,10 @@ program
     }
     if (command.toLowerCase() === 'onlysave') {
       require('./save.cjs').OnlySaveCommand(commit)
+      return
+    }
+    if (command.toLowerCase() === 'note') {
+      require('./note.cjs').NoteCommand(commit)
       return
     }
     if (command.toLowerCase() === 'publish') {
